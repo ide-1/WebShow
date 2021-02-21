@@ -1,0 +1,41 @@
+<html>
+    <head>
+    
+        <link rel="stylesheet" href="styles.css">
+        <script>
+        
+        var short = 1000
+        var long = 3000
+        var delay = short
+        var stop
+        var num = 1
+        var sources = ["tomteluva.png", "crabstick.jpg", "shoppingcart.png", "remi.jpg"]
+        
+        function pause() {
+            clearTimeout(stop);
+        }
+        function startLoop() {
+            clearTimeout(stop);
+            delay = long;
+            change();
+        }
+        function change() {
+            document.getElementById("frame").src = sources[num];
+            num = (num+1)%sources.length;
+            stop = setTimeout(change, delay);
+            delay = short;            
+        }
+        
+        </script>
+    </head>
+    <body>
+
+        <button  class="button" type="button" onclick="startLoop()">change</button>
+        <button  class="button" type="button" onclick="pause()">stop</button>
+        <iframe class="iframe" id="frame" src="tomteluva.png" >
+        </iframe>
+        
+
+    </body>
+
+</html>
