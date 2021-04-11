@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="time.css">
+        <script> 
+        function updateTime(){
+        var d = new Date();
+        var n = d.toLocaleTimeString('sv-SE');
+        n = n.slice(0, -3);
+        document.getElementById("text").textContent = n;
+        t = setTimeout(function() {
+            updateTime();
+        }, 500);
+        }
+        
+        </script>
+
+    </head>
+    <body class="background" onload="updateTime()">
+
+        
+            <h1 class="time" id="text"> hellloooooo  </h1>
+        
+</body
