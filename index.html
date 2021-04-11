@@ -9,7 +9,10 @@
         var delay = short
         var stop
         var num = 1
-        var sources = ["tomteluva.png", "crabstick.jpg", "shoppingcart.png", "remi.jpg"]
+        var sources = [
+		"http://www.time-time.net/timer/digital-clock-fullscreen.php",
+		"http://localhost:8000"
+	]
         
         function pause() {
             clearTimeout(stop);
@@ -30,7 +33,7 @@
     </head>
     <body>
 
-        <iframe class="iframe" id="frame" src="tomteluva.png" >
+	    <iframe class="iframe" id="frame" src="remi.jpg">
         </iframe>
         <button  class="button" type="button" onclick="startLoop()">change</button>
         <button  class="button" type="button" onclick="pause()">stop</button>
